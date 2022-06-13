@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script  src="./assets/js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/6c69111a57.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <h1>Paiement par carte de crédit</h1>
+    <br>
+    <h2>Frais de transaction <span id="vert">0.00€</span></h2>
+    
+    <div class="tips">
+            <img src="./assets/images/cadenas.png" width="20px" height="20px"></i>Paiement sécurisé par by HiPay SAS, 25-bit SSL
+     </div>
+        
+        <div class="container">
+            <div class="col1">
+                <div class="card">
+                    <div class="front">
+                        <div class="type">
+                             <img class="bankid"/>
+                        </div>
+                            <span class="chip"></span>
+                            <span class="card_number">&#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; </span>
+                            <div class="date"><span class="date_value">MM / YY</span>
+                            </div>
+                            <span class="fullname">Nom du titulaire</span>
+                    </div>
+
+                    <div class="back">
+
+                        <div class="magnetic">  
+                        </div>
+                        <div class="bar">
+                         </div>
+                        <span class="seccode">&#x25CF;&#x25CF;&#x25CF;</span>
+                        <span class="chip"></span><span class="disclaimer">Cette carte est la propriété de la Banque de France. <br> Si vous trouvez cette carte, Merci de la remettre à la BDF - 75000 Paris, 22 rue Wallstreet </span>
+                    </div>
+                </div>
+          </div>
+
+            <div class="col2">
+                <label>Numéro de la carte</label>
+                <input class="number" type="text" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                <label>Titulaire de la carte</label>
+                <input class="inputname" type="text" placeholder=""/>
+                <label>Date d'expiration</label>
+                <input class="expire" type="text" placeholder="MM / YY"/>
+                <label>Cryptogramme</label>
+                <input class="ccv" type="text" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                <button class="buy"> Payer  39.45 €</button>
+            </div>
+        </div>
+</body>
+
+</html>
